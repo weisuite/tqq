@@ -1,0 +1,142 @@
+<div id="tqq">
+    <div class="entry classic" data-name="entry">
+        <div class="toolbar" data-name="toolbar">
+            <a data-name="share" class="button unselectable" title="Share"><span class="reply19x19"></span></a>
+            <!-- a data-name="like" class="button unselectable" title="Like"><span class="heart-grey-20x20"></span></a>
+            <a data-name="unlike" class="button unselectable" title="Unlike"><span class="heart-red-20x20"></span></a-->                        
+        </div>
+		<a class="avatar" data-name="avatar"><img></a>
+		<a class="title" data-name="title"></a>
+		<a class="timestamp" data-name="timestamp"></a>
+		<a class="thumbnail" data-name="thumbnail"><img></a>
+		<div class="wsml" data-name="wsml"></div>
+		<div class="attachments" data-name="attachments"></div>
+        <div class="conversations tabPanel" data-name="conversations">
+            <!-- http://www.charbase.com/2617-unicode-black-shogi-piece -->
+            <span class="arrow unselectable">&#9751;</span>
+            <div class="toolbar tabs" data-name="stats">
+                <a data-name="reposts" class="button unselectable"><span class="caption">Reposts (0)</span></a>            
+                <a data-name="comments" class="button unselectable"><span class="caption">Comments (0)</span></a>
+            </div>      
+            <div class='content'>
+                <div class='child'  data-name="reposts">
+                    <div class="entry comment textbox">
+                        <textarea></textarea>
+                        <div class="label">Add a repost...</div>
+                        <div class="toolbar">
+                            <a data-name="cancel" class="button unselectable"><span class="caption brown">Cancel</span></a>
+                            <a data-name="repost" class="button unselectable"><span class="caption blue">Repost</span></a>                        
+                        </div>
+                    </div>
+                    <div class="entries"></div>   
+                    <div class="entry toolbar" data-name="bottombar">
+                        <a class="button unselectable" data-name="more"><span>more</span></a>
+                    </div>                                           
+                </div>              
+                <div class='child'  data-name="comments">
+                    <div class="entry comment textbox">
+                        <textarea></textarea>
+                        <div class="label">Add a comment...</div>
+                        <div class="toolbar">
+                            <a data-name="cancel" class="button unselectable"><span class="caption brown">Cancel</span></a>
+                            <a data-name="comment" class="button unselectable"><span class="caption blue">Comment</span></a>                        
+                        </div>
+                    </div>
+                    <div class="entries"></div>   
+                    <div class="entry toolbar" data-name="bottombar">
+                        <a class="button unselectable" data-name="more"><span>more</span></a>
+                    </div>                                           
+                </div>        
+            </div>  
+        </div>  
+		<!-- add an empty div to ensure the parent div occupy the space of floating 
+			block -->
+		<div style="clear: both;"></div>
+	</div>
+    <!-- it's important to put after the entry as the entry will be retrieved first with selector div.entry -->
+    <div class="entry comment" data-name="comment">
+        <a class="avatar" data-name="avatar"><img></a>
+        <div class="wsml" data-name="wsml"></div>
+        <a class="timestamp" data-name="timestamp"></a>
+        <div style="clear: both;"></div>
+    </div>	
+    <!-- comment is required for sharing the style with entry.comment -->
+    <div class="entry repost comment" data-name="repost">
+        <a class="avatar" data-name="avatar"><img></a>
+        <div class="wsml" data-name="wsml"></div>
+        <a class="timestamp" data-name="timestamp"></a>
+        <div style="clear: both;"></div>
+    </div>   
+    <!-- stream start-->   
+	<div class="stream">
+		<div class="dropdownMenu" data-name="menu">
+		    <div class="header">
+				<div class="title" data-name="title"></div>
+				<div class="toolbar menubar">
+				    <a data-name="home" class="button unselectable" title="Home"><span class="caption home-grey-20x20"></span></a>
+                    <a data-name="write" class="button unselectable" title="Write"><span class="caption write19x19"></span></a>				    
+				    <a data-name="search" class="button unselectable" title="Search"><span class="caption search19x19"></span></a>				    
+				    <a data-name="setting" class="button unselectable" title="Setting"><span class="caption setting19x19"></span></a>
+				    <a data-name="more" class="button unselectable" title="More"><span class="caption dropdown19x19"></span></a>
+				</div>
+			</div>
+			<!-- DROPDOWNS -->
+			<div class="dropdowns" data-name="dropdowns">
+			     <div class="child" data-name="search">
+                    <ul>
+                        <li><label>Keywords</label></li>
+                        <li><input type="text" name="q"></li>
+                    </ul>
+                    <div class="toolbar">
+                       <span><input type="checkbox" preventDefault="false" stopPropagation="false" name="persisted" value="true">Save the search</span>
+                        <a data-name="submit" class="button unselectable"><span class="caption blue">Search</span></a>                  
+                    </div>           			     
+			     </div>
+                 <div class="child" data-name="setting">
+                    <div class="connect">
+                        <div class="logo"></div>
+                         <div class="toolbar" style="margin-bottom:20px">
+                            <a data-name="connect" class="button unselectable"><span class="blue">Connect with Weibo</span></a>
+                         </div>
+                    </div>    
+                    <div class="disconnect">
+                        <div class="connectedUser">
+                            <label>Logged in as: </label><a data-name="username"></a>
+                        </div>
+                        <div class="columnType">
+                            <label>View Stream: </label><select name="columnType"></select>
+                        </div>                    
+                        <div class="toolbar">
+                            <a data-name="disconnect" class="button unselectable"><span class="brown">Disconnect</span></a><a data-name="save" class="button unselectable"><span class="blue">Save</span></a>
+                        </div>
+                    </div>                               
+                 </div>
+                 <div class="child" data-name="more">
+                    <a data-name="help" data-href="http://help.hootsuite.com/forums/21288291-sina-weibo-app" data-target="_blank" title="Help">Help</a>
+                    <hr>
+                    <a data-name="feedback" data-href="http://feedback.hootsuite.com/forums/176803-hootsuite-app-sina-weibo" data-target="_blank" title="Feedback">Feedback</a>
+                    <hr>
+                    <a data-name="developer" data-href="http://www.weisuite.com?source=weibo" data-target="_blank" title="Developer">Developer</a>
+                 </div>		     
+			</div>
+		</div>
+		<div class="space"></div>
+        <div class="content deckPanel">
+            <div class='child entries selected'  data-name="main"></div>
+            <div class='child entries'  data-name="sub"></div>
+        </div>		
+        <div class="bottombar">
+            <span class="noResultsMsg">No results found</span>
+        </div>
+	</div>
+	<!-- stream  end -->
+    <div class="attachment" data-name="attachment">                
+        <a class="thumbnail" target="_blank"><img></a>      
+        <div class="title">
+            <a target="_blank"></a>
+        </div>
+        <div class="caption"></div>
+        <div class="description"></div>
+    </div>  
+</div>
+
